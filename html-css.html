@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <INPUT type="button" value="Window" OnClick="alert(window.status);">
+    <INPUT type="button" value="Navigator" OnClick="alert(navigator.appVersion);">
+    <INPUT type="button" value="Location" OnClick="alert(location.href	);">
+      <input type="button" value="Screen" onClick="alert(screen.width + 'X' + screen.height);">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>История процессоров</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+  <script type="text/javascript">alert(document.lastModified)</script>
+  <script type="text/javascript">
+    function changeParagraphStyle(element) {
+      element.style.paddingRight = '3cm';
+      element.style.textIndent = '2.5cm';
+    }
+  
+    function restoreParagraphStyle(element) {
+      element.style.paddingRight = '';
+      element.style.textIndent = '';
+    }
+  </script>
+  <script>
+    // Функция для переключения стиля при наведении и отведении мыши
+    function toggleCellStyle(cell) {
+      if (cell.classList.contains("table-cell")) {
+        cell.className = "table-cell-alternate";
+      } else {
+        cell.className = "table-cell";
+      }
+    }
+  </script>
+  <script>
+      function hideMiddleImage() {
+        var middleImage = document.getElementsByName("image2")[0];
+        middleImage.style.display = "none";
+      }
+
+      function showMiddleImage() {
+        var middleImage = document.getElementsByName("image2")[0];
+        middleImage.style.display = "block";
+      }
+
+      function swapImages() {
+        var image1 = document.getElementsByName("image1")[0];
+        var image3 = document.getElementsByName("image3")[0];
+
+        var tempZIndex = image1.style.zIndex;
+        image1.style.zIndex = image3.style.zIndex;
+        image3.style.zIndex = tempZIndex;
+      }
+      </script>
+
+</head>
+
+<body>
+<div class="text">
+    <main>
+      <script> </script>
+      <h1>История создания футбольного клуба Челси</h1>
+<p onmouseover="this.style.color = 'red'; this.style.fontFamily = 'Arial';" onmouseout="this.style.color = ''; this.style.fontFamily = '';">Футбольный клуб Челси имеет богатую историю, полную важных моментов и достижений.</p>
+
+<h2>Хронология создания футбольного клуба Челси</h2>
+<p class="news"><span class="date">1905 - </span>Основание футбольного клуба</p>
+<p onmouseover="changeParagraphStyle(this);" onmouseout="restoreParagraphStyle(this);">Футбольный клуб Челси был основан в 1905 году и стал одним из самых известных и успешных клубов в истории английского футбола.</p>
+
+<p class="news"><span class="date">1955 - </span>Первый чемпионский титул</p>
+<p>В 1955 году Челси выиграл свой первый чемпионский титул в английской футбольной лиге, что укрепило его позиции в футбольном мире.</p>
+
+<p class="news"><span class="date">2003 - </span>Приобретение клубом нового стадиона</p>
+<p>В 2003 году футбольный клуб Челси приобрел стадион Стэмфорд Бридж, который стал его домашней ареной и символом клуба.</p>
+
+<p class="news"><span class="date">2012 - </span>Победа в Лиге чемпионов УЕФА</p>
+<p>В 2012 году Челси победил в Лиге чемпионов УЕФА, одним из самых престижных турниров в мировом футболе.</p>
+
+<p class="news"><span class="date">2021 - </span>Победа в Лиге чемпионов УЕФА во второй раз</p>
+<p>В 2021 году Челси одержал свою вторую победу в Лиге чемпионов УЕФА, продолжая свою историю успехов.</p>
+
+      
+      <table>
+        <tr>
+          <td class="table-cell" onmouseover="toggleCellStyle(this)" onmouseout="toggleCellStyle(this)">Ячейка 1</td>
+          <td class="table-cell-alternate" onmouseover="toggleCellStyle(this)" onmouseout="toggleCellStyle(this)">Ячейка 2</td>
+        </tr>
+        <tr>
+          <td class="table-cell" onmouseover="toggleCellStyle(this)" onmouseout="toggleCellStyle(this)">Ячейка 3</td>
+          <td class="table-cell-alternate" onmouseover="toggleCellStyle(this)" onmouseout="toggleCellStyle(this)">Ячейка 4</td>
+        </tr>
+      </table>
+
+      
+      
+      <button onclick="hideMiddleImage()">Скрыть средний рисунок</button>
+      <button onclick="showMiddleImage()">Показать средний рисунок</button>
+      <button onclick="swapImages()">Поменять слои</button>
+      
+      <img class="image" src="ch1.jpg" name="image1" style="z-index: 1;">
+      <img class="image" src="ch2.jpg" name="image2" style="z-index: 2;">
+      <img class="image" src="ch3.jpg" name="image3" style="z-index: 3;">
+
+
+      
+    </main>
+  </div>
+</body>
+</html>
